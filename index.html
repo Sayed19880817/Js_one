@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="w-75 mx-auto py-4">
+        <h3 class="py-3 fw-bolder">Product Managment System</h3>
+        
+        <label for="productNameInput">ProductName :</label>
+        <input type="text" oninput="validateProductName()" class="form-control md-2" id="productNameInput">
+
+        <label for="productPriceInput">ProductPrice :</label>
+        <input type="number" class="form-control md-2" id="productPriceInput">
+
+        <label for="productCategoryInput">ProductCategory :</label>
+        <input type="text" class="form-control md-2" id="productCategoryInput">
+
+        <label for="productDescInput">ProductDesc :</label>
+        <textarea type="text" class="form-control md-2" id="productDescInput"></textarea>
+        <button id="addBtn" onclick="addproduct();" class="btn btn-info">ADD Product</button>
+        <button id="updateBtn" class="btn d-none btn-warning">update</button>
+
+    </div>
+    <div class="w-75 mx-auto p-4">
+        <label for="search">Search :</label>
+        <input oninput="searchProducts(this.value)" type="text" placeholder="search by name" class="form-control" id="search">
+    </div>
+    <table class="table w-75 mx-auto">
+        <thead>
+            <th>index</th>
+            <th>productName</th>
+            <th>productPrice</th>
+            <th>productCategory</th>
+            <th>productDesc</th>
+            <th>update</th>
+            <th>delet</th>
+        </thead>
+        <tbody id="tableBody">
+            
+        </tbody>
+    </table>
+
+
+
+    <script src="js/main.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jQuery3.7.1.min.js"></script>
+</body>
+</html>
